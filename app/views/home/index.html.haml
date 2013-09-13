@@ -12,3 +12,13 @@
             %p {{user.photo}}
 
 
+%div{'ng-controller' => 'TalkListCtrl' }
+  %ul
+    %li{'ng-repeat' => 't in talks'}
+      %div{'ng-init' => 'talk=t[0]'}
+        %p {{talk.id}}
+        %p {{talk.name}}
+        %p {{talk.description}}
+        %p {{talk.speaker_id}}
+        %p {{talk.talk_date | date: '%d / %m / %y'}}
+
