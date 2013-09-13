@@ -1,6 +1,6 @@
 .row
   .small-12.columns
-    .panel{'ng-controller' => 'UserListCtrl' }
+    .panel.radius{'ng-controller' => 'UserListCtrl' }
       %h1 List of users
       %ul
         %li{'ng-repeat' => 'u in users'}
@@ -10,7 +10,6 @@
             %p {{user.last_name}}
             %p {{user.email}}
             %p {{user.photo}}
-
 
 %div{'ng-controller' => 'TalkListCtrl' }
   %table
@@ -29,4 +28,17 @@
       %td {{talk.description}}
       %td {{talk.speaker_id}}
       %td {{talk.talk_date | date: '%d / %m / %y'}}
+.row
+  .small-12.columns
+    .panel.radius
+      %h1 List of Talks
+      %div{'ng-controller' => 'TalkListCtrl' }
+        %ul
+          %li{'ng-repeat' => 't in talks'}
+            %div{'ng-init' => 'talk=t[0]'}
+              %p {{talk.id}}
+              %p {{talk.name}}
+              %p {{talk.description}}
+              %p {{talk.speaker_id}}
+              %p {{talk.talk_date | date: '%d / %m / %y'}}
 
