@@ -1,15 +1,22 @@
 .row
   .small-12.columns
-    .panel.radius{'ng-controller' => 'UserListCtrl' }
-      %h1 List of users
-      %ul
-        %li{'ng-repeat' => 'u in users'}
-          %div{'ng-init' => 'user=u[0]'}
-            %p {{user.id}}
-            %p {{user.first_name}}
-            %p {{user.last_name}}
-            %p {{user.email}}
-            %p {{user.photo}}
+    .panel.radius{'ng-controller' => 'UserListCtrl'}
+      %table{width: '100%'}
+        %title Users
+        %tr
+          %th
+          %th Id
+          %th First Name
+          %th Last Name
+          %th Email
+          %th Photo
+        %tr{'ng-repeat' => 'u in users'}
+          %td{'ng-init' => 'user=u[0]'}
+          %td {{user.id}}
+          %td {{user.first_name}}
+          %td {{user.last_name}}
+          %td {{user.email}}
+          %td {{user.photo}}
 
 .row
   .small-12.columns
