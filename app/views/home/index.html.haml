@@ -11,34 +11,46 @@
             %p {{user.email}}
             %p {{user.photo}}
 
-%div{'ng-controller' => 'TalkListCtrl' }
-  %table
-    %title Talks
-    %tr
-      %th
-      %th Id
-      %th Name
-      %th Description
-      %th speaker_id
-      %th Date
-    %tr{'ng-repeat' => 't in talks'}
-      %td{'ng-init' => 'talk=t[0]'}
-      %td {{talk.id}}
-      %td {{talk.name}}
-      %td {{talk.description}}
-      %td {{talk.speaker_id}}
-      %td {{talk.talk_date | date: '%d / %m / %y'}}
 .row
   .small-12.columns
     .panel.radius
-      %h1 List of Talks
+      %h1 Listng Talks
       %div{'ng-controller' => 'TalkListCtrl' }
-        %ul
-          %li{'ng-repeat' => 't in talks'}
-            %div{'ng-init' => 'talk=t[0]'}
-              %p {{talk.id}}
-              %p {{talk.name}}
-              %p {{talk.description}}
-              %p {{talk.speaker_id}}
-              %p {{talk.talk_date | date: '%d / %m / %y'}}
+        %table
+          %tr
+            %th
+            %th Id
+            %th Name
+            %th Description
+            %th speaker_id
+            %th Date
+          %tr{'ng-repeat' => 't in talks'}
+            %td{'ng-init' => 'talk=t[0]'}
+            %td {{talk.id}}
+            %td {{talk.name}}
+            %td {{talk.description}}
+            %td {{talk.speaker_id}}
+            %td {{talk.talk_date | date: '%d / %m / %y'}}
 
+.row
+  .small-12.columns
+    .panel.radius
+      %h1 Listng Speakers
+      %div{'ng-controller' => 'SpeakerListCtrl' }
+        %table
+          %tr
+            %th
+            %th Id
+            %th First Name
+            %th Last Name
+            %th Description
+            %th email
+            %th Photo
+          %tr{'ng-repeat' => 't in speakers'}
+            %td{'ng-init' => 'speaker=t[0]'}
+            %td {{speaker.id}}
+            %td {{speaker.first_name}}
+            %td {{speaker.last_name}}
+            %td {{speaker.description}}
+            %td {{speaker.email}}
+            %td {{speaker.photo}}
