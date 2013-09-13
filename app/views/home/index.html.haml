@@ -1,11 +1,14 @@
-%div{'ng-controller' => 'UserListCtrl' }
-  %ul
-    %li{'ng-repeat' => 'u in users'}
-      %div{'ng-init' => 'user=u[0]'}
-        %p {{user.id}}
-        %p {{user.first_name}}
-        %p {{user.last_name}}
-        %p {{user.email}}
-        %p {{user.photo}}
+.row
+  .small-12.columns
+    .panel{'ng-controller' => 'UserListCtrl' }
+      %h1 List of users
+      %ul
+        %li{'ng-repeat' => 'u in users'}
+          %div{'ng-init' => 'user=u[0]'}
+            %p {{user.id}}
+            %p {{user.first_name}}
+            %p {{user.last_name}}
+            %p {{user.email}}
+            %p {{user.photo}}
 
 
