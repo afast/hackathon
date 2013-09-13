@@ -12,7 +12,10 @@
 //
 //= require angular
 //= require angular-bootstrap
+//= require angular-resource
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+var app = angular.module('fridayTalks', ['ngResource'])
