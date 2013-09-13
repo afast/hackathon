@@ -14,8 +14,16 @@
 
 %div{'ng-controller' => 'TalkListCtrl' }
   %table
+    %title Talks
+    %tr
+      %th
+      %th Id
+      %th Name
+      %th Description
+      %th speaker_id
+      %th Date
     %tr{'ng-repeat' => 't in talks'}
-      %div{'ng-init' => 'talk=t[0]'}
+      %td{'ng-init' => 'talk=t[0]'}
       %td {{talk.id}}
       %td {{talk.name}}
       %td {{talk.description}}
