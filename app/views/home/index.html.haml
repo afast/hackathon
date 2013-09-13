@@ -13,12 +13,12 @@
 
 
 %div{'ng-controller' => 'TalkListCtrl' }
-  %ul
-    %li{'ng-repeat' => 't in talks'}
+  %table
+    %tr{'ng-repeat' => 't in talks'}
       %div{'ng-init' => 'talk=t[0]'}
-        %p {{talk.id}}
-        %p {{talk.name}}
-        %p {{talk.description}}
-        %p {{talk.speaker_id}}
-        %p {{talk.talk_date | date: '%d / %m / %y'}}
+      %td {{talk.id}}
+      %td {{talk.name}}
+      %td {{talk.description}}
+      %td {{talk.speaker_id}}
+      %td {{talk.talk_date | date: '%d / %m / %y'}}
 
