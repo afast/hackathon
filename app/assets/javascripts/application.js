@@ -16,6 +16,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require_self
 //= require_tree .
 
 var app = angular.module('fridayTalks', ['ngResource'])
