@@ -1,0 +1,9 @@
+%div{'ng-controller' => 'UserListCtrl' }
+  %ul
+    %li{'ng-repeat' => 'user in users'}
+      %p {{user.id}}
+      %p {{user.first_name}}
+      %p {{user.last_name}}
+      %p {{user.email}}
+      %p {{user.photo}}
+
